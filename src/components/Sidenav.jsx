@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 const Sidenav = () => {
-  return <div>Sidenav</div>;
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    <div>
+      <AiOutlineMenu />
+    </div>
+  );
 };
 
 export default Sidenav;
